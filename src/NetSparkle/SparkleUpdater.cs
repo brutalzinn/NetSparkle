@@ -1252,6 +1252,8 @@ namespace NetSparkleUpdater
                         {relaunchAfterUpdate}
                         :afterinstall
                         endlocal";
+
+
                     write.Write(output);
                     write.Close();
                 }
@@ -1322,10 +1324,39 @@ namespace NetSparkleUpdater
             _installerProcess.Start();
             await QuitApplication();
         }
+        public void executeCMD()
+        {
+            try
+            {
 
+      System.Diagnostics.ProcessStartInfo procStartInfo = new System.Diagnostics.ProcessStartInfo("cmd", @"/c  WZUNZIP.EXE -ye -o " + _sparkle.TmpDownloadFilePath + " " + TargetDirectory);
+                procStartInfo.UseShellExecute = true;
+                System.Diagnostics.Process proc = new System.Diagnostics.Process();
+                proc.StartInfo = procStartInfo;
+                proc.Start();
+                proc.WaitForExit();
+
+
+
+
+
+            }
+            catch
+            {
+                string createText = "Erro ao encontrar o launcher novo. Não foi possível realizar atualização automática.  /n Código: 404CEFG";
+                // 
+
+                File.WriteAllText(System.AppDomain.CurrentDomain.BaseDirectory + @"\changelog.txt", createText);
+
+
+            }
+
+        }
         /// <summary>
         /// Quits the application (host application) 
         /// </summary>
+        /// 
+        /// 
         /// <returns>Runs asynchrously, so returns a Task</returns>
         public async Task QuitApplication()
         {

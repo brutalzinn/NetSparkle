@@ -38,7 +38,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetSparkle.Samples.HandleEv
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSparkle.Xamarin", "src\NetSparkle.Xamarin\NetSparkle.Xamarin.csproj", "{0E23D858-2A2D-4D60-AC01-B420D079D9C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSparkle.Tests.AppCastGenerator", "src\NetSparkle.Tests.AppCastGenerator\NetSparkle.Tests.AppCastGenerator.csproj", "{5E4DB54B-E9E8-48FF-AD10-6F3609A63B82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetSparkle.Tests.AppCastGenerator", "src\NetSparkle.Tests.AppCastGenerator\NetSparkle.Tests.AppCastGenerator.csproj", "{5E4DB54B-E9E8-48FF-AD10-6F3609A63B82}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
